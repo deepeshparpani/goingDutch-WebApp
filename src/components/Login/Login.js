@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import './Login.css';
 export default class Login extends Component {
+
+  
+
   constructor(props) {
     super(props);
     this.state = {
@@ -37,14 +40,19 @@ export default class Login extends Component {
       });
   }
   render() {
+    window.localStorage.setItem("token",0);
     return (
+      <>
+      <div className="logospan">
+      <a href="/dashboard" class="logo">going<span>Dutch</span></a>
+      </div>
       <form onSubmit={this.handleSubmit}>
 
       <div className="form">
         <h3>Sign In</h3>
 
         <div className="mb-3">
-          <label>Email address</label>
+         
           <input
             type="email"
             className="form-control"
@@ -54,7 +62,7 @@ export default class Login extends Component {
         </div>
 
         <div className="mb-3">
-          <label>Password</label>
+         
           <input
             type="password"
             className="form-control"
@@ -62,7 +70,7 @@ export default class Login extends Component {
             onChange={(e) => this.setState({ password: e.target.value })}
           />
         </div>
-
+        
         <div className="mb-3">
           <div className="custom-control custom-checkbox">
             <input
@@ -86,6 +94,7 @@ export default class Login extends Component {
         </p>
         </div>
       </form>
+      </>
     );
   }
 }

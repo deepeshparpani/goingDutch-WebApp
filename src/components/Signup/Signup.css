@@ -4,26 +4,6 @@
     --primary-color: #007AF3;
   }
 
-  .logospan{
-    position: relative;
-    top: 100px;
-    width: fit-content;
-    left: 600px;    
-  }
- .logo {
-    text-decoration: none;
-    font-weight: bold;
-    color: black;
-    font-size: 40px;
-
-    
-   
-  }
-  
- .logo span {
-    color: var(--primary-color);
-  }
-
 
 .form{
   
@@ -35,7 +15,7 @@
     position: relative;
     font-family: 'Poppins';
     left: 500px;
-    top: 200px;
+    top: 100px;
     
 }
 

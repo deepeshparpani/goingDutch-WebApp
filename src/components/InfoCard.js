@@ -1,6 +1,13 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
 
+import PersonIcon from '@mui/icons-material/Person';
+import EventIcon from '@mui/icons-material/Event';
+
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import NavigateNext from '@mui/icons-material/NavigateNext';
+import TrendingFlatIcon from '@mui/icons-material/TrendingFlat';
+
 const InfoCard = (props) => {
     const IsFirstCardUp = props.firstCard
     const IsSecondCardUp = props.secondCard
@@ -11,7 +18,7 @@ const InfoCard = (props) => {
     const allEmpty = () => (
         <div className="empty">
             <p>Please proceed with the three steps to split your expenses.</p> 
-            <p><span className="round">1</span>Name your thing</p>
+            <p><span className="round">1</span>Name your event</p>
             <p><span className="round">2</span>Make your group</p>
             <p><span className="round">3</span>Add your expenses</p>
         </div>
@@ -19,7 +26,7 @@ const InfoCard = (props) => {
 
     const twoMoreSteps = () => (
         <div className="empty">
-            <p>C'mon two more steps to go...</p> 
+            <p>Two steps to go</p> 
             <p><span className="round">2</span>Make your group</p>
             <p><span className="round">3</span>Add your expenses</p>
         </div>        
@@ -27,7 +34,7 @@ const InfoCard = (props) => {
 
     const oneMoreStep = () => (
          <div className="empty">
-            <p>Almost there! one more to go</p> 
+            <p>Almost there! One more to go</p> 
             <p><span className="round">3</span>Add your expenses</p>
         </div>        
     )
@@ -36,7 +43,7 @@ const InfoCard = (props) => {
         <div>
             <center><h4>{props.expName}</h4></center>
             <div className="flexDisplay blocks">
-                <i className="material-icons calendar">event</i><span>{new Date(props.date).toDateString()}</span>
+                <i className="material-icons calendar"><EventIcon/></i><span>{new Date(props.date).toDateString()}</span>
             </div>
         </div>
     )
@@ -48,7 +55,7 @@ const InfoCard = (props) => {
                 props.members.map((member, index) => {
                     return (
                         <div key={index} className="flexDisplay">
-                            <i className="material-icons person">person</i><span>{member.name}</span>
+                            <i className="material-icons person"><PersonIcon/></i><span>{member.name}</span>
                         </div>
                     )
                 })
@@ -66,7 +73,7 @@ const InfoCard = (props) => {
                         return (
                             <div className="blocks" key={index}>
                                 <div className="flexDisplay">
-                                    <i className="material-icons white">navigate_next</i>
+                                    <i className="material-icons white"><NavigateNextIcon/></i>
                                     <span className="white">Amount</span>
                                     <span>{expense.amount}</span>
                                 </div> 
@@ -110,7 +117,7 @@ const InfoCard = (props) => {
                                         <div key={secondIndex} className="flexDisplay">
                                             <span>{firstItem.member}</span>
                                             <div className="flexDisplay" style={{color: "white", paddingLeft: "5px", paddingRight: "5px"}}>
-                                                <i className="material-icons">trending_flat</i>
+                                                <i className="material-icons"><TrendingFlatIcon/></i>
                                                 <span style={{margin: "auto"}}>{secondItem.amount}</span>
                                             </div>
                                             <span>{secondItem.to}</span>

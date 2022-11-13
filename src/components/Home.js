@@ -4,6 +4,8 @@ import InfoCard from './InfoCard'
 import ExpenseForm from './ExpenseForm'
 import Notification from './Notification'
 import NewExpenseModal from './NewExpenseModal'
+import './index.scss';
+import 'bootstrap/dist/css/bootstrap.css';
 
 // import expenseService from '../services/expense-split'
 
@@ -239,6 +241,10 @@ const Home = () => {
 
     return (
       <div>
+        <div className="logospan">
+      <a href="/dashboard" class="logo">going<span>Dutch</span></a>
+      </div>
+
         <Container className="home">
           <Notification msg={message} />
 

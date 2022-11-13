@@ -6,15 +6,30 @@ import ReactDOM from 'react-dom/client';
 import './homepage.css';
 import { Navigate, useNavigate } from "react-router-dom";
 import Home from "./Home";
+import App from "./App/App"
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const Handleclick = Event => {
-    root.render(
-      
+    if(window.localStorage.getItem("token")!=0){
+
+        root.render(
+
             <Home/>
 
-    );
-}
+    )
+        }
+    else{
+       alert("Login first") 
+       window.location.href='./sign-in';
+    }
+
+
+
+    }
+
+    
+
 
 
 const Homepage = () =>{

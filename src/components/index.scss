@@ -1,5 +1,4 @@
 
-
 $Blue-Grotto: #60A3D9;
 $Navy-Blue: #003B73;
 $Pale-Blue: #90caf9;
@@ -7,7 +6,12 @@ $Another-Blue: #0D47A1;
 $infoCard-Blue: #1a237e;
 $light-grey: #e0e0e0;
 body {
- 
+    
+    .home{
+        position: relative;
+        top:100px;
+        background-color: pink;
+    }
 
 
     .infoCard {

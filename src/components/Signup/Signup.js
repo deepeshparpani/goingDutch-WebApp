@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Login from '../Login/Login';
+import './Signup.css'
 
 export default class SignUp extends Component {
   constructor(props) {
@@ -44,6 +45,8 @@ export default class SignUp extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
+
+        <div className="form">
         <h3>Sign Up</h3>
 
         <div className="mb-3">
@@ -94,6 +97,8 @@ export default class SignUp extends Component {
         <p className="forgot-password text-right">
           Already registered <a href="/sign-in">sign in?</a>
         </p>
+
+        </div>
       </form>
     );
   }

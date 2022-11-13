@@ -1,6 +1,11 @@
 import React, {useState} from 'react'
 import {Container, Row, Col, Card, Button, Form} from 'react-bootstrap'
 
+import AddCircleIcon from '@mui/icons-material/AddCircle';
+import DeleteIcon from '@mui/icons-material/Delete';
+import PersonIcon from '@mui/icons-material/Person';
+
+
 const ExpenseForm = (props) => {
     const [selectedRadio, setSelectedRadio] = useState('')
 
@@ -27,9 +32,9 @@ const ExpenseForm = (props) => {
                 <Card>
                     <Form onSubmit={props.handleFirst} id="FirstForm">
                         <center><h4 className="one">1</h4></center>
-                        <Form.Control onChange={props.handleExpName} placeholder="C'mon Name it" required/>
+                        <Form.Control onChange={props.handleExpName} placeholder="Create an event" required/>
                         <Form.Control onChange={props.handleDate} type="date" required/>
-                        <center><Button title="Name your thing" type="submit">Name your thing</Button></center>
+                        <center><Button title="Name your thing" type="submit">Add your event</Button></center>
                     </Form>
                 </Card>
             </Col>
@@ -43,13 +48,13 @@ const ExpenseForm = (props) => {
                                 return (
                                     <div className="addPerson" key={index}>
                                         <Form.Control placeholder="Person Name" onChange={(event) => props.handleMember(event, index)} required/>
-                                        <i className="material-icons minusBtn" title="delete member" onClick={() => props.removeMember(index)}>delete</i>
+                                        <i className="material-icons minusBtn" title="delete member" onClick={() => props.removeMember(index)}><DeleteIcon/></i>
                                     </div>
                                 )
                             })
                         }
                         <center>
-                            <i className="material-icons addBtn" title="add member" onClick={(event) => props.addMember(event)}>add_circle</i>
+                            <i className="material-icons addBtn" title="add member" onClick={(event) => props.addMember(event)}><AddCircleIcon/></i>
                         </center>
                         <center><Button title="form group" type="submit">Make your group</Button></center>
                     </Form>
@@ -88,7 +93,7 @@ const ExpenseForm = (props) => {
                         }
                         </Row>
                         <center>
-                            <i className="material-icons addBtn" title="add more expense" onClick={(event) => props.addExpenseModal(event)}>add_circle</i>
+                            <i className="material-icons addBtn" title="add more expense" onClick={(event) => props.addExpenseModal(event)}><AddCircleIcon/></i>
                         </center>
                         <center><Button title="add the expenses" type="submit">Add the expenses</Button></center>
                     </Form>
