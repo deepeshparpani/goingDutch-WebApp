@@ -50,7 +50,7 @@ const Homepage = () =>{
 
     <ul class="secondary-nav">  
         <li><a href="#">Contact</a></li>
-        <li class="go-premium-cta"><a href="#">Login / Sign up</a></li>
+        <li class="go-premium-cta"><a href="#">View your Events</a></li>
     </ul>
 </nav>      
 
