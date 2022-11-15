@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-
+import Home from "./Home";
+import './user.css'
 export default class UserDetails extends Component {
   constructor(props) {
     super(props);
@@ -7,6 +8,7 @@ export default class UserDetails extends Component {
       userData: "",
     };
   }
+  
   componentDidMount() {
     fetch("http://localhost:5000/userData", {
       method: "POST",
@@ -29,9 +31,13 @@ export default class UserDetails extends Component {
   render() {
     return (
       <div>
-        Name<h1>{this.state.userData.fname}</h1>
-        Email <h1>{this.state.userData.email}</h1>
-      </div>
+        <td className="welcome">Welcome back {this.state.userData.fname}
+        </td>
+        <td className="homehome">
+        <Home/>
+        </td>
+
+        </div>
     );
   }
 }

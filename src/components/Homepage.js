@@ -7,6 +7,7 @@ import './homepage.css';
 import { Navigate, useNavigate } from "react-router-dom";
 import Home from "./Home";
 import App from "./App/App"
+import UserDetails from "./userdetails";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -15,7 +16,7 @@ const Handleclick = Event => {
 
         root.render(
 
-            <Home/>
+            <UserDetails/>
 
     )
         }

@@ -34,7 +34,18 @@ export default class Login extends Component {
         console.log(data, "userRegister");
         if (data.status == "ok") {
           alert("login successful");
+          
+
+
+
+
+
           window.localStorage.setItem("token", data.data);
+
+
+
+
+
           window.location.href = "./dashboard";
         }
       });

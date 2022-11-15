@@ -1,4 +1,4 @@
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 $Blue-Grotto: #60A3D9;
 $Navy-Blue: #003B73;
 $Pale-Blue: #90caf9;
@@ -6,12 +6,41 @@ $Another-Blue: #0D47A1;
 $infoCard-Blue: #1a237e;
 $light-grey: #e0e0e0;
 body {
+    font-family: 'Poppins';
     
     .home{
         position: relative;
         top:100px;
         background-color: pink;
     }
+
+    .welcome{
+        font-weight: 40px;
+    }
+
+    :root {
+        --primary-color: #007AF3;
+      }
+    
+      .logospan1{
+        position: relative;
+        top: 100px;
+        width: fit-content;
+        left: 400px;    
+      }
+     .logo1 {
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+        font-size: 40px;
+    
+        
+       
+      }
+      
+     .logo1 span {
+        color: var(--primary-color);
+      }
 
 
     .infoCard {
